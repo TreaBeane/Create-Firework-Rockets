@@ -43,10 +43,10 @@ function run() {
         var _a;
         return __generator(this, function (_b) {
             switch (_b.label) {
-                case 0: return [4 /*yield*/, Promise.resolve().then(function () { return require('./assets/fireworks_rocket.json'); })];
+                case 0: return [4 /*yield*/, Promise.resolve().then(function () { return require('../assets/fireworks_rocket.json'); })];
                 case 1:
                     entity = _b.sent();
-                    return [4 /*yield*/, Promise.resolve().then(function () { return require('./assets/fireworks_rocket.animation_controller.json'); })];
+                    return [4 /*yield*/, Promise.resolve().then(function () { return require('../assets/fireworks_rocket.animation_controller.json'); })];
                 case 2:
                     animation_controller = _b.sent();
                     config = JSON.parse(fs.readFileSync('data/create_fireworks_rocket/config.json', 'utf-8'));
@@ -110,7 +110,7 @@ function run() {
                     _b.label = 5;
                 case 5:
                     if (!(k < 5)) return [3 /*break*/, 8];
-                    return [4 /*yield*/, Promise.resolve().then(function () { return require('./assets/fireworks_rocket_blast_trail.json'); })];
+                    return [4 /*yield*/, Promise.resolve().then(function () { return require('../assets/fireworks_rocket_blast_trail.json'); })];
                 case 6:
                     blast_effect = _b.sent();
                     blast_effect.particle_effect.description.identifier = key + "_blast_" + j + k;
@@ -141,7 +141,7 @@ function run() {
                     k++;
                     return [3 /*break*/, 5];
                 case 8: return [3 /*break*/, 11];
-                case 9: return [4 /*yield*/, Promise.resolve().then(function () { return require('./assets/fireworks_rocket_blast.json'); })];
+                case 9: return [4 /*yield*/, Promise.resolve().then(function () { return require('../assets/fireworks_rocket_blast.json'); })];
                 case 10:
                     blast_effect = _b.sent();
                     blast_effect.particle_effect.description.identifier = key + "_blast_" + j;
@@ -168,7 +168,7 @@ function run() {
                     on_entry.push("/particle " + key + "_blast_" + j + " ~~~");
                     fs.writeFileSync('RP/particles/firework_effects/' + substringKey + '/blast' + j + '.particle.json', JSON.stringify(blast_effect, null, 4));
                     _b.label = 11;
-                case 11: return [4 /*yield*/, Promise.resolve().then(function () { return require('./assets/fireworks_rocket_flash.json'); })];
+                case 11: return [4 /*yield*/, Promise.resolve().then(function () { return require('../assets/fireworks_rocket_flash.json'); })];
                 case 12:
                     flash_effect = _b.sent();
                     flash_effect.particle_effect.description.identifier = key + "_flash_" + j;
